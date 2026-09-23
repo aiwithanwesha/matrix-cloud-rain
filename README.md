@@ -53,10 +53,8 @@
 > A glowing cloud meets a stream of digital characters — created entirely with code.
 
 <p align="center">
-   <video src="[https://github.com/user-attachments/assets/](https://github.com/user-attachments/assets/0507f640-922a-414f-b21e-0c0c233aec11)" controls autoplay loop muted width="70%">
-   </video>
+  <img src="preview.png" width="90%" alt="Matrix Cloud Rain Preview">
 </p>
-
 
 ---
 
