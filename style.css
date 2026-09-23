@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background: #000;
+    color: white;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    overflow: hidden;
+}
+
+h1 {
+    margin-top: 40px;
+    font-size: 42px;
+    font-family: "Papyrus", Helvetica, sans-serif;
+    font-weight: 900;
+    letter-spacing: 1px;
+}
+
+h1 span {
+    color: #579cff;
+    font-family: "Lucida Handwriting", Times, serif;
+}
+
+
+
+.container {
+    position: relative;
+    width: 650px;
+    height: 430px;
+    margin: 35px auto;
+    border: 4px solid #714cff;
+    border-radius: 25px;
+    overflow: hidden;
+    background: #000;
+}
+
+.cloud {
+    --clr: #00ffcc;
+
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    left: 50%;
+    top: 45px;
+    transform: translateX(-50%);
+    filter: drop-shadow(0 0 25px var(--clr));
+    animation: changeColor 8s linear infinite;
+}
+
+.cloud-shape {
+    position: absolute;
+    width: 300px;
+    height: 65px;
+    left: 50%;
+    bottom: 145px;
+    transform: translateX(-50%);
+    background: var(--clr);
+    border-radius: 50px;
+    box-shadow: 0 0 30px var(--clr);
+}
+
+.cloud-shape::before {
+    content: "";
+    position: absolute;
+    width: 125px;
+    height: 95px;
+    left: 45px;
+    bottom: 25px;
+    background: var(--clr);
+    border-radius: 50%;
+}
+
+.cloud-shape::after {
+    content: "";
+    position: absolute;
+    width: 140px;
+    height: 130px;
+    right: 30px;
+    bottom: 15px;
+    background: var(--clr);
+    border-radius: 50%;
+}
+
+.rain {
+    position: absolute;
+    width: 230px;
+    height: 180px;
+    left: 50%;
+    top: 130px;
+    transform: translateX(-50%);
+}
+
+.drop {
+    position: absolute;
+    top: 0;
+    color: var(--clr);
+    font-family: monospace;
+    font-size: 18px;
+    font-weight: bold;
+    text-shadow: 0 0 8px var(--clr);
+    animation: fall linear forwards;
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(180px);
+        opacity: 0;
+    }
+}
+
+@keyframes changeColor {
+    0% {
+        --clr: #00ffcc;
+    }
+    25% {
+        --clr: #00ff55;
+    }
+    50% {
+        --clr: #00aaff;
+    }
+    75% {
+        --clr: #ff44dd;
+    }
+    100% {
+        --clr: #00ffcc;
+    }
+}
+
+@media (max-width: 700px) {
+    h1 {
+        font-size: 28px;
+        margin-top: 30px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    .container {
+        width: 90%;
+        height: 400px;
+        margin-top: 30px;
+    }
+}
+
+footer.signature {
+    margin-top: 30px;
+    font-size: 0.85rem;
+    font-family: "Lucida Handwriting", Helvetica, sans-serif;
+    color: var(--text-muted);
+    letter-spacing: 0.5px;
+    z-index: 1;
+}
