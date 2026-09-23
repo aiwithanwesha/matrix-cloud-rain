@@ -53,7 +53,7 @@
 > A glowing cloud meets a stream of digital characters — created entirely with code.
 
 <p align="center">
-  <img src="preview.png" width="90%" alt="Matrix Cloud Rain Preview">
+  <img src="preview.jpg" width="90%" alt="Matrix Cloud Rain Preview">
 </p>
 
 ---
